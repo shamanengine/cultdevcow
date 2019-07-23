@@ -1,0 +1,3 @@
+{% if params %}{{ method }}{% endif %}
+{% for k, v in params.items %}{{ k }}: {{ v }} {% endfor %}
+statement is {{statement}}
