@@ -1,5 +1,5 @@
 from django.http import HttpResponse
-from django.shortcuts import render, redirect
+from django.shortcuts import render
 
 # Create your views here.
 from django.template import loader
@@ -19,7 +19,7 @@ def echo0(request):
 
 
 # render
-def echo(request):
+def echo1(request):
     """Принимает request и возвращает HttpResponse всегда со статусом 200,
     а также она должна возвращать эхо, переданных в запросе,
     параметров и значение заголовка X-Print-Statement.
@@ -53,3 +53,13 @@ def extend(request):
         'a': request.GET.get('a'),
         'b': request.GET.get('b')
     })
+
+
+def echo(request):
+    context = {
+        "GET": request.GET,
+        "POST": request.POST,
+        "statement": request.META.get("HTTP_X_PRINT_STATEMENT", "empty"),
+        "META": request.META
+    }
+    return render(request, 'echo.html', context=context)

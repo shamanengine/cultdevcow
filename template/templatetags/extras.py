@@ -9,14 +9,17 @@ def inc(value, arg):
     1-й - число которое нужно увеличить,
     2-й - на сколько нужно увеличить первое число.
     """
-    return value + arg
+    return int(value) + int(arg)
 
 
-@register.tag
-def division(a: str, b: str, to_int=False):
+@register.simple_tag
+def division(a, b, to_int=False):
     """Тег “division“ (то есть тег для деления), который принимает 3 аргумента:
     1-й - делимое, 2-й - делитель, 3-й - деление целочисленное (именованный аргумент to_int).
     По умолчанию необходимо сделать вещественное деление.
     Обратите внимание, что делимое и делитель целые числа, но передается в тег в формате string.
     """
-    return int(a) / int(b) if to_int else a % b
+    if to_int and abs(int(b)) > abs(int(a)) and int(a) * int(b) < 0:
+        return 0
+
+    return int(a) // int(b) if to_int else int(a) / int(b)
