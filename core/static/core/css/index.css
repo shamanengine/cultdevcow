@@ -1,0 +1,19 @@
+.test {
+    font-family: "Roboto", "Lucida Grande", "DejaVu Sans", "Bitstream Vera Sans", Verdana, Arial, sans-serif;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 40px;
+
+    color: blue;
+    background-color: yellow;
+}
+
+.test2 {
+    height: 100px;
+    padding: 10px;
+    border: 5px solid red;
+    color: violet;
+    margin: 10px;
+
+    display: inline-block;
+}

@@ -15,16 +15,17 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, re_path
 from django.urls import include
 
 from core import views
 
 urlpatterns = [
+    re_path('^/?$', views.redirect_index),
     path('index/', views.index),
     path('admin/', admin.site.urls),
-    url(r'^routing/', include('routing.urls')),
-    url(r'^template/', include('template.urls')),
+    # url(r'^routing/', include('routing.urls')),
+    # url(r'^template/', include('template.urls')),
 
     # url(r'^routing/',
     #     include([

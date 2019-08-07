@@ -6,7 +6,11 @@ from django.views.decorators.http import require_GET, require_POST
 # Create your views here.
 
 def index(request):
-    return HttpResponse('ok')
+    return render(request, 'core/index.html')
+
+
+def redirect_index(request):
+    return redirect('/index')
 
 
 # redirect
