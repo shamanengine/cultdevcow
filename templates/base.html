@@ -1,4 +1,5 @@
 {% load static %}
+{% load core_filters %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -21,26 +22,26 @@
 <div>
     {# Navbar #}
     {% block nav %}
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">|{v17_|)3\/_[0\^/</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <nav class="navigation navbar navbar-expand-lg navbar-light bg-light">
+            {#|{v17_|)3\/_[0\^/#}
+            <a class="navbar-brand" href="#">{{ "Kult dev Cow"|lower|moon }}</a>
+            {#            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"#}
+            {#                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">#}
+            {#                <span class="navbar-toggler-icon"></span>#}
+            {#            </button>#}
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        {#                        __|\|3\^/$__#}
+                        <a class="nav-link" href="#">{{ 'News'|lower|moon|underscore }}<span
+                                class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
-                            Dropdown
+                            {{ 'Dropdown'|lower|moon|underscore }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="#">Action</a>
@@ -48,9 +49,6 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
