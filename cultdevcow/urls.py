@@ -22,6 +22,7 @@ from core import views
 
 urlpatterns = [
     re_path('^/?$', views.redirect_index),
+    path('logo/', views.logo),
     path('index/', views.index),
     path('admin/', admin.site.urls),
     # url(r'^routing/', include('routing.urls')),

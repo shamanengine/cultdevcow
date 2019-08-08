@@ -13,6 +13,10 @@ def redirect_index(request):
     return redirect('/index')
 
 
+def logo(request):
+    return render(request, 'core/logo.html')
+
+
 # redirect
 def my_view(request):
     # ...
