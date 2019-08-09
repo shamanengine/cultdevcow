@@ -24,7 +24,7 @@
     {% block nav %}
         <nav class="navigation navbar navbar-expand-lg navbar-light bg-light">
             {#|{v17_|)3\/_[0\^/#}
-            <a class="navbar-brand" href="#">{{ "Kult dev Cow"|lower|moon }}</a>
+            <a class="navbar-brand" href="/">{{ "Kult dev Cow"|lower|moon|underscore }}</a>
             {#            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"#}
             {#                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">#}
             {#                <span class="navbar-toggler-icon"></span>#}
@@ -32,24 +32,31 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
+
                     <li class="nav-item active">
-                        {#                        __|\|3\^/$__#}
-                        <a class="nav-link" href="#">{{ 'News'|lower|moon|underscore }}<span
+                        <a class="nav-link" href="/">News<span
                                 class="sr-only">(current)</span></a>
                     </li>
+
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                            data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="false">
-                            {{ 'Dropdown'|lower|moon|underscore }}
+                            {{ 'Projects' }}
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="/moonspeak">{{ "Moon speak" |lower|moon|underscore }}</a>
+                            <a class="dropdown-item" href="https://github.com/shamanengine/BookWorm">book_worm</a>
+                            <div class="dropdown-divider">TEXT</div>
                             <a class="dropdown-item" href="#">Something else here</a>
                         </div>
                     </li>
+
+                    <li class="nav-item disabled">
+                        <a class="nav-link" href="https://github.com/shamanengine/shamanengine.github.io">Wiki<span
+                                class="sr-only">(current)</span></a>
+                    </li>
+
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">

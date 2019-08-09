@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+{% load core_filters %}
+
+{% block title %}Index{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static "core/css/index.css" %}">
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <p>When European settlers first came upon Japan, the Japanese scholars suggested that Europse adopt the
+                    Japanese written language as a "universal" language understood by all parties. This was the cause of
+                    World War 2 several years later.</p>
+            </div>
+            <div class="col-6">
+                <form>
+                    <div class="form-group">
+
+{#                        <label for="exampleFormControlTextarea1">Enter text that you would like to convert to#}
+{#                            moonspeak</label>#}
+{#                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>#}
+
+                        <label for="moonspeakInput">English</label>
+                        <input type="text" class="form-control" id="moonspeakInput" aria-describedby="moonspeaklHelp"
+                               placeholder="Enter text">
+                        <small id="moonspeakHelp" class="form-text text-muted">Enter text that you would like to convert to
+                            moonspeak</small>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+

@@ -8,25 +8,25 @@ MOON_DICT = {'a': '@',
              'c': '(',
              'd': '|)',
              'e': '3',
-             'f': '<|>',
+             'f': '£',
              'g': '[,',
              'h': '|~|',
-             'i': '1',
+             'i': '¡',
              'j': ")'",
              'k': '|{',
-             'l': '|_',
-             'm': '/v\\',
+             'l': '1',
+             'm': '/˅\\',
              'n': '|\|',
              'o': '0',
-             'p': '|7',
+             'p': 'π',
              'q': '0',
              'r': '|?',
-             's': '5',
-             't': '7',
-             'u': '#',
+             's': '$',
+             't': '†',  # 't': '†',
+             'u': 'µ',
              'v': '\/',
              'w': '\^/',
-             'x': 'x',
+             'x': 'χ',
              'y': "'/",
              'z': '&'}
 
@@ -43,6 +43,12 @@ def moon(text):
 
 @register.filter
 def underscore(text):
-    """Transforms all whitespaces to "__" and adds "__" at the beginning and the end"""
+    """Transforms all whitespaces to '__'"""
     # return '__'+text.replace(' ','__') + '__'
-    return f"__{text.replace(' ', '__')}__"
+    return text.replace(' ', '__')
+
+
+@register.filter
+def pre_underscore(text):
+    """Adds "__" at the beginning and the end"""
+    return f"__{text}__"

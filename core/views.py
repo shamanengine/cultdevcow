@@ -12,9 +12,13 @@ def index(request):
 def redirect_index(request):
     return redirect('/index')
 
-
+@require_GET
 def logo(request):
     return render(request, 'core/logo.html')
+
+@require_GET
+def moonspeak(request):
+    return render(request, 'core/moonspeak.html')
 
 
 # redirect
