@@ -42,9 +42,16 @@
 
 }
 
-img.avatar{
+img.avatar-large{
+    width: 192px;
+    height: 192px;
+    /*border-radius: 16px*/
+}
+
+img.avatar-medium{
     width: 128px;
-    border-radius: 16px
+    height: 128px;
+    /*border-radius: 16px*/
 }
 
 img.avatar-small{

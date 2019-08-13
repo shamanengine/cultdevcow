@@ -21,11 +21,13 @@ from django.urls import include
 from core import views
 
 urlpatterns = [
+    path('index/', views.index),
+    path('admin/', admin.site.urls),
     re_path('^/?$', views.redirect_index),
     path('logo/', views.logo),
     path('moonspeak/', views.moonspeak),
-    path('index/', views.index),
-    path('admin/', admin.site.urls),
+    path('topic_details/<int:pk>/', views.topic_details, name='topic_details'),
+    # url(r'^topic_details/(?P<pk>\d+)$', views.topic_details),
     # url(r'^routing/', include('routing.urls')),
     # url(r'^template/', include('template.urls')),
 

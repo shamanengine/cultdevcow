@@ -12,9 +12,11 @@ def index(request):
 def redirect_index(request):
     return redirect('/index')
 
+
 @require_GET
 def logo(request):
     return render(request, 'core/logo.html')
+
 
 @require_GET
 def moonspeak(request):
@@ -25,3 +27,8 @@ def moonspeak(request):
 def my_view(request):
     # ...
     return redirect('/some/url')
+
+
+@require_GET
+def topic_details(request, pk):
+    return render(request, 'core/topic_details.html')
