@@ -1,0 +1,53 @@
+.logo {
+    font-size: large;
+    color: red;
+}
+
+.searchbar {
+    color: green;
+}
+
+.robo {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.robo .img-top {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 20;
+}
+
+.robo:hover .img-top {
+    display: inline;
+}
+
+.robo2 {
+    width: 32px;
+    height: 32px;
+    background: url("search2_inactive.svg") no-repeat;
+    margin: 0;
+}
+
+.robo2:hover {
+    background: url("search2.svg") no-repeat;
+}
+
+.avatar{
+
+}
+
+img.avatar{
+    width: 128px;
+    border-radius: 16px
+}
+
+img.avatar-small{
+    width: 64px;
+    border-radius: 8px
+}
