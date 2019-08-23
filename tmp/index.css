@@ -38,23 +38,38 @@
     background: url("search2.svg") no-repeat;
 }
 
-.avatar{
+.avatar {
 
 }
 
-img.avatar-large{
+img.avatar-large {
     width: 192px;
     height: 192px;
     /*border-radius: 16px*/
 }
 
-img.avatar-medium{
+img.avatar-medium {
     width: 128px;
     height: 128px;
     /*border-radius: 16px*/
 }
 
-img.avatar-small{
+img.avatar-small {
     width: 64px;
     border-radius: 8px
+}
+
+/* makes container fluid for md and sm */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        width: 100%;
+        max-width: none;
+    }
 }
